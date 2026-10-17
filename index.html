@@ -116,6 +116,63 @@ article p:first-of-type::first-letter {
   padding:6px 12px 0 0; color:var(--accent);
 }
 
+/* 列表：政策汇编类内容的主要结构 */
+article ul, article ol {
+  margin:0 0 26px 0; padding-left:22px;
+}
+article li {
+  margin-bottom:14px; line-height:1.95;
+  padding-left:4px;
+}
+article ul li { list-style:none; position:relative; }
+article ul li::before {
+  content:'·'; position:absolute; left:-16px;
+  color:var(--accent); font-weight:700; font-size:20px;
+}
+article ol { list-style:none; counter-reset:item; padding-left:0; }
+article ol > li {
+  counter-increment:item; position:relative;
+  padding-left:34px; margin-bottom:22px;
+}
+article ol > li::before {
+  content:counter(item);
+  position:absolute; left:0; top:1px;
+  width:23px; height:23px; border-radius:7px;
+  background:rgba(88,166,255,.14); color:var(--accent2);
+  font-size:12.5px; font-weight:500;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--sans);
+}
+article ol > li > h4 {
+  font-family:var(--serif); font-weight:600;
+  font-size:17.5px; line-height:1.65;
+  color:var(--text); margin:0;
+}
+article ol > li > h4:has(+ ul) { margin-bottom:12px; }
+article ol > li > ul { margin-top:12px; }
+
+article h4 {
+  font-family:var(--serif); font-weight:600;
+  font-size:17px; color:var(--text);
+  margin:20px 0 10px; line-height:1.6;
+}
+
+article a {
+  color:var(--accent2); text-decoration:none;
+  border-bottom:1px solid rgba(88,166,255,.3);
+  transition:.15s;
+  word-break:break-word;
+}
+article a:active { border-bottom-color:var(--accent2); }
+
+article strong { font-weight:500; color:var(--text); }
+
+article blockquote {
+  border-left:3px solid var(--border);
+  padding:4px 0 4px 18px; margin:0 0 24px;
+  color:var(--muted);
+}
+
 /* ===== 来源 ===== */
 .source-link {
   display:flex; align-items:center; justify-content:space-between;
@@ -207,46 +264,488 @@ footer p { margin-bottom:8px; line-height:1.8; }
     500万元风险补偿基金、1亿元产业赋能基金（二期）</p></div>
 
   <article>
-    <h2>&gt;* 安徽省各地人工智能"一人公司"（OPC）扶持政策汇编</h2>
-<h2>安徽省各地人工智能"一人公司"（OPC）扶持政策汇编</h2>
-<p>政策汇编 (398) 发布于：2026-10-08 更新于：2026-10-08</p>
+    <h1>安徽省各地人工智能"一人公司"（OPC）扶持政策汇编</h1>
 <p>OPC（One Person Company，人工智能“一人公司”）是指以大模型、智能体为核心技术驱动，依托产业场景开展专业化服务的轻量型创业实体，核心逻辑是“一人主体、AI赋能、轻资产、低风险、快迭代”。本页汇编安徽省省级及各市已公开发布的 OPC 相关扶持政策，政策名称可直接跳转原文，供创业者、服务机构与行业研究者查询使用。页面长期维护，有新出台政策将持续更新。</p>
-<p>· 已有政策（7 市）：合肥市、芜湖市、淮南市、马鞍山市、安庆市、黄山市、滁州市</p>
-<p>· 载体先行（5 市）：蚌埠市、淮北市、六安市、池州市、宣城市</p>
-<h2>· 尚无专项政策（4 市）：铜陵市、阜阳市、宿州市、亳州市</h2>
-<p>1. #### 《人工智能中小企业创业支持计划（2026—2028年）》</p>
-<p>· 3年内新培育科技和创新型中小企业1万家以上，专精特新“小巨人”企业突破2000家</p>
-<p>· 部署4方面15项重点任务，深入实施普惠算力赋能中小企业发展专项行动</p>
-<p>· 明确鼓励各地对依托智能工具开展敏捷创业的“一人公司”、超级个体等微型主体给予包容支持</p>
-<p>· 高标准建设10个科技型企业孵化器、10个国家中小企业公共服务示范平台（基地）</p>
-<p>2. #### 《安徽省推进人工智能OPC创新创业发展行动方案（2026—2028年）》</p>
-<p>· 到2028年建成省级OPC社区不少于30个，集聚OPC团队不少于3000个，带动就业创业超1万人</p>
-<p>· 省级OPC社区符合条件的，纳入省级通用人工智能产业创新园区建设，按绩效评价结果给予最高500万元支持</p>
-<p>· 企业算力支出最高补贴20%；创新推出“Token贷”“模型贷”等专属金融产品</p>
-<p>· 个人创业担保贷款最高50万元、小微企业最高400万元，并按规定给予50%财政贴息</p>
-<p>· 政府采购预付款原则上不低于40%；高校科研人员离岗创办OPC可保留3年人事关系</p>
-<p>3. #### 《关于支持人工智能“一人公司”（OPC）创新创业发展的通知》（15条举措）</p>
-<p>· 依托“皖事通办”平台，打造OPC设立全程网办、一日办结闭环</p>
-<p>· 支持OPC以知识产权、股权、债权等非货币财产依法作价出资，探索数据资产入表及出资运行路径</p>
-<p>· 鼓励银行机构推出“词元贷”“模型贷”，支持以数据知识产权、算法模型著作权质押融资</p>
-<p>· 新设OPC原则上不纳入当年双随机抽查范围，落实首违不罚、轻微免罚清单</p>
-<p>4. #### 《关于推进词元高质量发展 培育数据要素价值释放新路径的若干举措》</p>
-<p>· 体系化提出数据、算力、模型、场景、生态、保障等15条词元发展全要素支持举措</p>
-<p>· 省市及有关服务商共建全省统一的词元公共服务平台，打造一站式“词元超市”服务</p>
-<p>· 明确建设OPC（一人公司）专区，为中小微企业提供普惠易用的数据、算力、模型等服务</p>
-<p>· 创新“数据券”政策举措，省级按有关市实际兑付支出30%比例予以补助</p>
-<h2>5. #### 《安徽省“人工智能+万物”应用行动方案》</h2>
-<p>· 安徽“人工智能+”应用的省级顶层设计文件，是词元、OPC 等后续专项举措的上位依据</p>
-<p>1. #### 《合肥市强功能优生态提质效 推动产业高质量发展若干政策》</p>
-<p>· 打造开放协同创新、要素富集的OPC标杆社区，依托高新区模立方AI社区等载体布局一批OPC社区</p>
-<p>· 对运营成效显著的OPC社区，给予最高300万元奖补</p>
-<p>· 强化人工智能赋能，推动AI与工业制造、医疗健康、城市治理等重点领域深度融合，分档给予最高100万元奖励</p>
-<h2>2. #### 《包河区促进AI+OPC社区发展若干政策》</h2>
-<p>· 空间、算力、融资、人才、场景、服务全链条“十大红利”支持</p>
-<p>· 算力、模型与语料专项补贴，单个企业年度补贴上限1000万元</p>
-<p>· 引领性优质OPC场景项目最高补贴500万元；赋能OPC的平台/机构单家最高补贴300万元</p>
-<p>· 推出专属“OPC专项贷”，优先纳入市级“政信贷”最高50%贷款贴息</p>
-<p>3. #### 《庐阳区人工智能OPC创业优选区培育发展三年行动计划（2026—2028年）》及“OPC庐阳六条政策”</p>
+<h2>16 市进展速览</h2>
+<ul>
+<li><strong>已有政策（7 市）</strong>：合肥市、芜湖市、淮南市、马鞍山市、安庆市、黄山市、滁州市</li>
+<li><strong>载体先行（5 市）</strong>：蚌埠市、淮北市、六安市、池州市、宣城市</li>
+<li><strong>尚无专项政策（4 市）</strong>：铜陵市、阜阳市、宿州市、亳州市</li>
+</ul>
+<h2>一、省级层面</h2>
+<ol>
+<li>
+<h4><a href="https://wap.miit.gov.cn/jgsj/qyj/wjfb/art/2026/art_86c400b4473849818629663a94a6d44b.html">《人工智能中小企业创业支持计划（2026—2028年）》</a></h4>
+</li>
+</ol>
+<ul>
+<li>3年内新培育科技和创新型中小企业1万家以上，<a href="https://www.ahchanye.com/cyxt/13924.html" title="专精特新">专精特新</a>“小巨人”企业突破2000家</li>
+<li>部署4方面15项重点任务，深入实施普惠算力赋能中小企业发展专项行动</li>
+<li>明确鼓励各地对依托智能工具开展敏捷创业的“一人公司”、超级个体等微型主体给予包容支持</li>
+<li>高标准建设10个科技型企业孵化器、10个国家中小企业公共服务示范平台（基地）</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://kjt.ah.gov.cn/kjzx/tzgg/123459701.html">《安徽省推进人工智能OPC创新创业发展行动方案（2026—2028年）》</a></h4>
+</li>
+</ol>
+<ul>
+<li>到2028年建成省级OPC社区不少于30个，集聚OPC团队不少于3000个，带动就业创业超1万人</li>
+<li>省级OPC社区符合条件的，纳入省级通用<a href="https://www.ahchanye.com/rgzn.html" title="人工智能">人工智能产业</a>创新园区建设，按绩效评价结果给予最高500万元支持</li>
+<li>企业算力支出最高补贴20%；创新推出“Token贷”“模型贷”等专属金融产品</li>
+<li>个人创业担保贷款最高50万元、小微企业最高400万元，并按规定给予50%财政贴息</li>
+<li>政府采购预付款原则上不低于40%；高校科研人员离岗创办OPC可保留3年人事关系</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="https://amr.ah.gov.cn/public/5248926/150641911.html">《关于支持人工智能“一人公司”（OPC）创新创业发展的通知》（15条举措）</a></h4>
+</li>
+</ol>
+<ul>
+<li>依托“皖事通办”平台，打造OPC设立全程网办、一日办结闭环</li>
+<li>推行“工位注册”和“一址多照”，入驻OPC社区凭工位使用证明即可办理登记，免于提交产权证明</li>
+<li>支持OPC以知识产权、股权、债权等非货币财产依法作价出资，探索数据资产入表及出资运行路径</li>
+<li>鼓励银行机构推出“词元贷”“模型贷”，支持以数据知识产权、算法模型著作权质押融资</li>
+<li>新设OPC原则上不纳入当年双随机抽查范围，落实首违不罚、轻微免罚清单</li>
+</ul>
+<ol start="4">
+<li>
+<h4><a href="https://sjzyj.ah.gov.cn/public/7061/40798527.html">《关于推进词元高质量发展 培育数据要素价值释放新路径的若干举措》</a></h4>
+</li>
+</ol>
+<ul>
+<li>体系化提出数据、算力、模型、场景、生态、保障等15条词元发展全要素支持举措</li>
+<li>省市及有关服务商共建全省统一的词元公共服务平台，打造一站式“词元超市”服务</li>
+<li>明确建设OPC（一人公司）专区，为中小微企业提供普惠易用的数据、算力、模型等服务</li>
+<li>创新“数据券”政策举措，省级按有关市实际兑付支出30%比例予以补助</li>
+</ul>
+<ol start="5">
+<li>
+<h4><a href="https://www.ah.gov.cn/public/1681/565487271.html">《安徽省“人工智能+万物”应用行动方案》</a></h4>
+</li>
+</ol>
+<ul>
+<li>安徽“人工智能+”应用的省级顶层设计文件，是词元、OPC 等后续专项举措的上位依据</li>
+</ul>
+<h2>二、16 个地级市</h2>
+<h3>1. 合肥市（已有政策）</h3>
+<ol>
+<li>
+<h4><a href="https://www.hefei.gov.cn/xxgk/szfgb/2026/dwh/szfwj/112496087.html">《合肥市强功能优生态提质效 推动产业高质量发展若干政策》</a></h4>
+</li>
+</ol>
+<ul>
+<li>打造开放协同创新、要素富集的OPC标杆社区，依托高新区模立方AI社区等载体布局一批OPC社区</li>
+<li>对运营成效显著的OPC社区，给予最高300万元奖补</li>
+<li>强化人工智能赋能，推动AI与工业制造、医疗健康、城市治理等重点领域深度融合，分档给予最高100万元奖励</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.baohe.gov.cn/xxgk/zzjg/qzfbm/kjj/gzdt/11488321.html">《包河区促进AI+OPC社区发展若干政策》</a></h4>
+</li>
+</ol>
+<ul>
+<li>空间、算力、融资、人才、场景、服务全链条“十大红利”支持</li>
+<li>算力、模型与语料专项补贴，单个企业年度补贴上限1000万元</li>
+<li>引领性优质OPC场景项目最高补贴500万元；赋能OPC的平台/机构单家最高补贴300万元</li>
+<li>推出专属“OPC专项贷”，优先纳入市级“政信贷”最高50%贷款贴息</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="http://www.ah.xinhuanet.com/20260428/7f9db2ae99604bb89a3566bd53f80fb1/c.html">《庐阳区人工智能OPC创业优选区培育发展三年行动计划（2026—2028年）》及“OPC庐阳六条政策”</a></h4>
+</li>
+</ol>
+<ul>
+<li>构建“1+3+N”全域人工智能OPC创业矩阵，到2028年底建成1个“庐阳OPC开源社区”</li>
+<li>专项政策涵盖空间保障、要素支持、金融赋能、场景开放、赛事赋能、公共服务六大方面</li>
+<li>为OPC创业者提供零成本启动工位，搭建统一算力调度平台并给予政策支持</li>
+<li>首批发布30个OPC微场景机会清单，覆盖数智商贸、网络安全与数字政府、文化旅游等六大领域</li>
+</ul>
+<ol start="4">
+<li>
+<h4><a href="https://amr.hefei.gov.cn/xwzx/15595385.html">《支持一人公司OPC创新创业发展的若干举措》</a></h4>
+</li>
+</ol>
+<ul>
+<li>从准入服务、梯度培育、知识产权、分类监管、公平竞争五大方面发力</li>
+<li>落实一址多照、工位注册等便利政策，运用AI赋能登记注册</li>
+<li>推行柔性监管，落实轻微免罚、园区沙盒监管模式</li>
+</ul>
+<h3>2. 芜湖市（已有政策）</h3>
+<ol>
+<li>
+<h4><a href="https://sjzyj.wuhu.gov.cn/openness/public/6596821/41257234.html">《芜湖市人工智能“算力券”实施细则（2026版）》</a></h4>
+</li>
+</ol>
+<ul>
+<li>算力使用方按智算服务合同实际发生费用25%兑付算力券，同一主体每年度累计不超过500万元</li>
+<li>具身智能等未来产业领域企业，经认定兑付比例提升至45%</li>
+<li>算力产业孵化载体（“算立方”）内中小微企业兑付比例提升至70%，单个企业每年最高不超过10万元</li>
+<li>首次将词元调用纳入补贴范围，降低<a href="https://www.ahchanye.com/cyxt/16216.html" title="初创企业">初创企业</a>“0到1”用算用模门槛</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.wuhunews.cn/yaowen/2026-07-02/649542.html">《芜湖市支持数据算力产业生态培育若干政策》</a></h4>
+</li>
+</ol>
+<ul>
+<li>围绕算力、数据、模型和场景应用三方面提出8条具体举措</li>
+<li>算力券、数据券、模型券“三券联动”，市级层面每年安排不超过1亿元补贴</li>
+<li>模型券全年兑付总额不超过2000万元，自研垂类模型按合同费用40%兑付</li>
+<li>支持企业采购数据产品、数据服务，每家企业每年不超过50万元</li>
+</ul>
+<h3>3. 蚌埠市（载体先行）</h3>
+<ol>
+<li>
+<h4><a href="http://www.ahipdc.cn/zwyw/sjdt/429134.html">龙子湖文化产业园“AI+OPC”社区及全省首个OPC知识产权保护工作站</a></h4>
+</li>
+</ol>
+<ul>
+<li>全省首个OPC知识产权保护工作站在蚌埠市龙子湖文化产业园揭牌运行</li>
+<li>推出“一二三四”知识产权服务模式：一扇门、两本书、三条线、四节课</li>
+<li>编印全省首部《人工智能OPC知识产权保护指南》</li>
+<li>龙子湖文化产业园为蚌埠市首个“AI+OPC”社区，已累计入驻企业107家</li>
+</ul>
+<h3>4. 淮南市（已有政策）</h3>
+<p>OPC 以专项条款形式纳入市级创业行动举措，非独立方案。</p>
+<ol>
+<li>
+<h4><a href="https://huainan.gov.cn/content/article/1261096768">《支持升级创业淮南行动若干举措》第16条（推进“OPC+创业”模式）</a></h4>
+</li>
+</ol>
+<ul>
+<li>简化OPC企业注册流程，依托安徽政务服务网“企业开办”平台提供OPC一站式服务</li>
+<li>为OPC创业者提供企业设立登记、社会保险登记等集成服务</li>
+<li>人工智能训练师纳入就业技能培训急需紧缺职业目录，补贴标准上浮20%</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.huainan.gov.cn/zwgk/bmdt/1261030862.html">闵淮汇智 OPC 生态社区（淮南高新区闵淮科创产业园）</a></h4>
+</li>
+</ol>
+<ul>
+<li>政校地三方共建，已入驻企业10余家</li>
+<li>三年目标集聚数百家OPC主体</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="https://ah.anhuinews.com/gdxw/202606/t20260614_9328172.html">全省首个 OPC 社区 AI 漫剧 SaaS 智算项目落地淮南</a></h4>
+</li>
+</ol>
+<ul>
+<li>由安徽移动淮南分公司落地</li>
+</ul>
+<h3>5. 马鞍山市（已有政策）</h3>
+<p>OPC 已写入市级<a href="https://www.ahchanye.com/cyxt/17380.html" title="营商环境">营商环境</a>举措与区级专项方案。</p>
+<ol>
+<li>
+<h4><a href="https://www.mas.gov.cn/xxgk/openness/detail/content/6a30bf5888668831688b4567.html">《马鞍山市创建市场化法治化国际化一流营商环境对标提升举措（2026版）》第96条（培育人工智能OPC创业生态）</a></h4>
+</li>
+</ol>
+<ul>
+<li>培育人工智能OPC创业生态，纳入全市营商环境对标提升举措（第96条，标★重点任务）</li>
+<li>依托全市规划的“C立方”OPC社区、OPC共享工位布局，配套工商注册、财税代理、政策咨询等一站式服务</li>
+<li>从算力、数据、人才、金融等维度出台专项扶持政策</li>
+<li>聚焦AIGC赛道推动优质项目和个体注册成立OPC，持续完善“算力—人才—场景—资本”闭环生态</li>
+<li>责任单位：市科技局、市人社局</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.mashsq.gov.cn/xxgk/openness/detail/content/6a72b9f188668875298b4586.html">《花山区“诗城创星港”建设实施方案暨2026年重点工作安排》</a></h4>
+</li>
+</ol>
+<ul>
+<li>出台“超级个体”专项入驻政策</li>
+<li>2026年完成首个“AIGC+OPC”示范社区挂牌，招募首批不少于10个OPC团队</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="https://ah.anhuinews.com/mas/xq/hsq/202602/t20260228_9122466.html">“C立方”OPC 社区（青年创新创业园）</a></h4>
+</li>
+</ol>
+<ul>
+<li>位于雨山区，由国资江东控股运营，规划100个共享工位</li>
+<li>花山区构建OPC全周期赋能体系，配套沙盒机制与千P级算力中心</li>
+</ul>
+<h3>6. 淮北市（载体先行）</h3>
+<p>暂未检索到市级 OPC 专项政策文件，但已建成皖北首个 OPC 社区并落地多项配套服务。</p>
+<ol>
+<li>
+<h4><a href="https://www.huaibei.gov.cn/zwgk/public/15/64938099.html">皖北首个 OPC 社区“智汇OPC创业社区”揭牌（市科创中心）</a></h4>
+</li>
+</ol>
+<ul>
+<li>面积约300平方米，已入驻8家团队</li>
+<li>提供场地租金减免、人才公寓优惠、政策申报指导、创业导师辅导</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.huaibei.gov.cn/zwgk/public/15/64969668.html">全市首笔 OPC 创业贷款落地（交通银行淮北分行）</a></h4>
+</li>
+</ol>
+<ul>
+<li>最快1个工作日放款，额度循环使用、随借随还</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="https://www.huaibei.gov.cn/zwgk/public/15/64969854.html">“龙虾盒子”本地 AI 智能体终端向 OPC 社区免费开放</a></h4>
+</li>
+</ol>
+<ul>
+<li>搭载千问35B模型，向社区开放、零算力费使用</li>
+</ul>
+<ol start="4">
+<li>
+<h4><a href="https://sjzy.huaibei.gov.cn/zwgk/public/340/65118183.html">落实省级算力券补贴并组织算力券申报</a></h4>
+</li>
+</ol>
+<ul>
+<li>组织本地企业申报省级算力券补贴</li>
+</ul>
+<h3>7. 铜陵市（尚无专项政策）</h3>
+<p>暂未检索到已出台的市级 OPC 专项政策；“人工智能+”行动方案尚在审议阶段。</p>
+<ol>
+<li>
+<h4><a href="https://ah.anhuinews.com/tl/sjszdt/sj/202608/t20260818_9507444.html">《铜陵市加快推动“人工智能+”行动方案》（市委常委会审议并原则通过）</a></h4>
+</li>
+</ol>
+<ul>
+<li>该方案处于审议通过阶段，正式印发文本与文号待核实</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://tl.gov.cn/tlsrmzf/gfxwj/pc/content/content_1984082404307689472.html">《铜陵市“乐创铜都”计划实施方案（2025—2027年）》</a></h4>
+</li>
+</ol>
+<ul>
+<li>设立1亿元人才科创基金</li>
+<li>青年创业担保贷款、创业责任险等创业支持举措</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="https://tl.gov.cn/openness/OpennessContent/show/1157143.html">算力与场景支持口径（市政协第95号提案答复）</a></h4>
+</li>
+</ol>
+<ul>
+<li>算力使用方给予不超过算力总支出20%的支持</li>
+<li>揭榜项目不超过场景开发投入20%、最高1000万元</li>
+</ul>
+<ol start="4">
+<li>
+<h4><a href="https://tltg.gov.cn/tgqrmzf/cqyw/pc/content/content_2071420464069926912.html">铜官区“AI赋能·创享未来”OPC 创业交流活动</a></h4>
+</li>
+</ol>
+<ul>
+<li>围绕OPC社区空间、人才招引、优惠政策落地开展交流</li>
+</ul>
+<h3>8. 安庆市（已有政策）</h3>
+<p>暂未检索到市级 OPC 专项政策文件，以下为该市及辖区已公开的相关配套举措。</p>
+<ol>
+<li>
+<h4><a href="https://www.ahyingjiang.gov.cn/public/2000000851/2024624147.html">《迎江区人工智能“算力券”实施细则（试行）》</a></h4>
+</li>
+</ol>
+<ul>
+<li>全年资金池不超过1000万元</li>
+<li>需求侧单个企业每年补贴不超过实际发生额的25%、最高100万元，重大项目最高200万元</li>
+<li>供给侧补贴比例不超过20%、最高100万元</li>
+<li>高校、科研机构、AI企业每月可免费使用2张单卡算力（含H100、昇腾910B等）</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://gxj.anqing.gov.cn/public/4018597/2007326327.html">《安庆市加快推动“人工智能+”专项工作方案》</a></h4>
+</li>
+</ol>
+<ul>
+<li>推动人工智能在九大领域融合应用</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="https://www.aqrd.gov.cn/plus/view.php?aid=20112">安庆市人大常委会公告：明确“引育一人公司（OPC）等创新市场主体”</a></h4>
+</li>
+</ol>
+<ul>
+<li>在市场主体培育表述中纳入“一人公司（OPC）”这一新型创业主体</li>
+</ul>
+<ol start="4">
+<li>
+<h4><a href="http://www.takg.com.cn/infoDetail?menuId=2662&amp;newsId=4162867">全市首个 OPC 项目落地安庆筑梦新区</a></h4>
+</li>
+</ol>
+<ul>
+<li>国企提供场地租金补贴、免费培训教室与48个创业工位</li>
+</ul>
+<h3>9. 黄山市（已有政策）</h3>
+<p>暂未检索到独立命名的市级 OPC 专项政策，OPC 已写入该市数字游民与服务业的政策条款之中。</p>
+<ol>
+<li>
+<h4><a href="https://fgw.huangshan.gov.cn/zwgk/public/6615717/11689001.html">《黄山市数字游民集聚创业地建设行动方案》</a></h4>
+</li>
+</ol>
+<ul>
+<li>到2027年集聚创业团队150家、吸引数字游民5万人次以上</li>
+<li>到2030年建成10家左右大型基地、集聚团队300家、数字游民超30万人次</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.huangshan.gov.cn/zxzx/zwyw/8405708.html">《大黄山全球数字游民集聚创业地建设行动方案》</a></h4>
+</li>
+</ol>
+<ul>
+<li>从创投资金、土地（存量建设用地与闲置设施）、人才三方面给予支持</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="https://tjj.huangshan.gov.cn/content/article/9323859">《黄山市促进服务业高质量发展若干措施（修订稿）》第13条</a></h4>
+</li>
+</ol>
+<ul>
+<li>支持数字游民服务平台建设，基地最高30万元、撮合运营主体最高50万元</li>
+<li>鼓励一人公司（OPC）创业发展，支持数字游民社区孵化OPC项目</li>
+<li>对年度内成功孵化5个及以上OPC的数字游民社区，给予最高30万元奖补</li>
+</ul>
+<ol start="4">
+<li>
+<h4><a href="https://www.huangshan.gov.cn/zxzx/bmdt/8422160.html">黄山市发放全市首张工位登记 OPC 营业执照</a></h4>
+</li>
+</ol>
+<ul>
+<li>设OPC专属窗口，推行工位注册、证照联办、“个转OPC”一站式服务</li>
+<li>落地于“数字游民+OPC”创新创业行动计划框架之下</li>
+</ul>
+<h3>10. 滁州市（已有政策）</h3>
+<p>该市已将 OPC 纳入青年人才创业生态与园区政策体系。</p>
+<ol>
+<li>
+<h4><a href="https://kjt.ah.gov.cn/kjzx/jckj/123505491.html">滁州市全链条打造青年人才 OPC 创业优质生态</a></h4>
+</li>
+</ol>
+<ul>
+<li>将OPC创业者纳入全市人才政策体系，支持苏滁现代产业园、南谯区出台OPC专项扶持政策</li>
+<li>构建“订单+金融+AI工具+社群”赋能体系，开放百余个应用场景，<a href="https://www.ahchanye.com/cyxt/15571.html" title="揭榜挂帅">揭榜挂帅</a>优质项目最高1000万元</li>
+<li>设立500万元风险补偿基金、1亿元产业赋能基金，联合金融机构推出专属信贷产品</li>
+<li>发放“数据券”，企业购买词元（Token）服务最高按30%比例补贴</li>
+<li>建成滁州市人工智能OPC社区等3个特色载体，累计入驻OPC企业68家</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.chuzhou.gov.cn/zxzx/jryw/1112747604.html">滁州创新打造“琅琊星辰”超级个体集聚示范区</a></h4>
+</li>
+</ol>
+<ul>
+<li>全国首个“人工智能+一人公司”人力资源服务社区</li>
+<li>500万元风险补偿基金、1亿元产业赋能基金（二期）</li>
+<li>专业工具使用补贴最高80%，2026年订单撮合金额3000万元</li>
+</ul>
+<ol start="3">
+<li>
+<h4><a href="http://app.chuzhou.cn/print.php?contentid=525592">滁州发放首期“数据券”</a></h4>
+</li>
+</ol>
+<ul>
+<li>重点支持人工智能OPC企业采购算力和词元（Token）</li>
+</ul>
+<ol start="4">
+<li>
+<h4><a href="https://www.chuzhou.gov.cn/zxzx/bmdt/1112754378.html">在滁高校人工智能 OPC 创业培训及场景开放机制</a></h4>
+</li>
+</ol>
+<ul>
+<li>依托中新苏滁高新区OPC社区、“琅琊星辰”社区培育近50家OPC主体</li>
+<li>开放百余个应用场景，揭榜挂帅优质项目最高支持1000万元</li>
+</ul>
+<h3>11. 阜阳市</h3>
+<ol>
+<li>
+<h4><a href="https://www.fy.gov.cn/OpennessContent/download/2783992.html?type=pdf">《阜阳市贯彻落实〈支持升级创业安徽行动若干措施〉任务清单》</a></h4>
+</li>
+</ol>
+<ul>
+<li>建设创业安徽阜阳分中心，拓展人工智能应用场景，打造特色创业街区</li>
+<li>由就业补助资金给予相应补助</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://kjj.fy.gov.cn/OpennessContent/show/2799384.html">《阜阳市贯彻落实〈安徽省“人工智能+万物”行动方案〉任务清单》</a></h4>
+</li>
+</ol>
+<ul>
+<li>组建总规模5亿元人工智能产业基金，对接省200亿元AI主题基金设立阜阳子基金</li>
+<li>设立3亿元战新科转基金二期</li>
+</ul>
+<h3>12. 宿州市</h3>
+<ol>
+<li>
+<h4><a href="https://kejiju.ahsz.gov.cn/xxfb/kjdt/196524911.html">市科技局举办全市科技系统 OPC 创新创业专题培训会</a></h4>
+</li>
+</ol>
+<ul>
+<li>面向各县区、园区科技主管部门开展OPC创新创业专题培训</li>
+<li>围绕全国OPC标杆案例，讲解发展逻辑、基础设施与运营体系</li>
+<li>提出探索契合宿州产业特点的OPC创新创业培育路径</li>
+</ul>
+<h3>13. 六安市</h3>
+<ol>
+<li>
+<h4><a href="https://www.luan.gov.cn/content/article/10761416">六安首个 OPC 共享社区落户六安市软件园</a></h4>
+</li>
+</ol>
+<ul>
+<li>提供免费工位、网络、会议室和“一站式”政务服务，实现“拎包入驻”</li>
+<li>配套种子基金、股权投资，开放共享中试基地、上海技术交易所（安徽）区域创新中心等平台</li>
+<li>首批3家OPC企业正式入驻，另为13家提供咨询服务</li>
+<li>业务覆盖AI游戏开发、AI中医养生、AI软件开发、AI数字内容制作等领域</li>
+</ul>
+<h3>14. 亳州市</h3>
+<p>暂无公开的 OPC 专项政策或落地举措，将持续跟踪更新。</p>
+<h3>15. 池州市</h3>
+<ol>
+<li>
+<h4><a href="https://www.chizhou.gov.cn/Content/show/779283.html">平天湖 OPC 社区（池州首个 AI 赋能轻创业空间）</a></h4>
+</li>
+</ol>
+<ul>
+<li>聚焦AIGC内容协作网络，配备专属算力资源、共享办公设备与<a href="https://www.ahchanye.com/cyxt/17533.html" title="双创">双创</a>配套体系</li>
+<li>以极简注册落地流程、算力即服务模式、全链条产业生态对接为特色</li>
+<li>已加入全国“AI+OPC”社区联盟</li>
+</ul>
+<ol start="2">
+<li>
+<h4><a href="https://www.chizhou.gov.cn/OpennessContent/show/1729137.html">平天湖 OPC 创业社区专项实施方案（市文旅局牵头推进）</a></h4>
+</li>
+</ol>
+<ul>
+<li>编制平天湖OPC创业社区专项实施方案，明确建设思路、发展目标、选址布局及空间规划</li>
+<li>同步落实算力补贴、运营保障等扶持政策</li>
+<li>依托双创大厦打造AIGC视听创业载体，推动校地协同育才</li>
+</ul>
+<h3>16. 宣城市</h3>
+<p>暂无市级 OPC 专项政策文件，所辖广德市已建成 OPC 产业创新中心。</p>
+<ol>
+<li>
+<h4><a href="https://www.xuancheng.gov.cn/News/show/1730619.html">广德市人工智能 OPC 产业创新中心（全市首家 OPC 社区）</a></h4>
+</li>
+</ol>
+<ul>
+<li>聚焦培育AI时代“超级个体”，提供AI漫剧、AI跨境电商、AI设计、品牌出海、数字营销等一站式赋能服务</li>
+<li>创新推行工位注册登记模式，实现“一张工位即可开办企业”</li>
+<li>以“社区地址+工位编号”作为经营场所办理营业执照，开设OPC业务绿色通道、专窗咨询指导</li>
+</ul>
+<p>THE END</p>
+<p>标签： <a href="https://www.ahchanye.com/tag/%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd/">人工智能</a><a href="https://www.ahchanye.com/tag/%e5%88%9b%e6%96%b0%e5%88%9b%e4%b8%9a/">创新创业</a></p>
+<p>分享：</p>
+<h3>温馨提示：</h3>
+<p>如有侵权请联系删除邮箱：2942802716@qq.com， 违法和不良信息举报邮箱：hzj@spiderltd.com。</p>
+<p><a href="https://www.ahchanye.com/zc/65808.html">关于开展2026年度绿色工厂推荐和动态管理工作的通知</a></p>
+<p><a href="https://www.ahchanye.com/zc/65810.html">关于征集2026年绿色低碳产品技术及供应商目录的通知</a></p>
+<h3>相关政策推荐</h3>
+<h3>关于征集2026年绿色低碳产品技术及供应商目录的通知](https://www.ahchanye.com/zc/65810.html "关于征集2026年绿色低碳产品技术及供应商目录的通知")</h3>
+<h3>关于开展2026年度绿色工厂推荐和动态管理工作的通知](https://www.ahchanye.com/zc/65808.html "关于开展2026年度绿色工厂推荐和动态管理工作的通知")</h3>
+<h3>关于征集住建行业人工智能应用场景的通知](https://www.ahchanye.com/zc/65807.html "关于征集住建行业人工智能应用场景的通知")</h3>
+<h3>关于组织申报重点新材料研发及应用国家科技重大专项2026年度第三批和2027年度第一批项目（非密类）的通知](https://www.ahchanye.com/zc/65806.html "关于组织申报重点新材料研发及应用国家科技重大专项2026年度第三批和2027年度第一批项目（非密类）的通知")</h3>
+<ul>
+<li>[关于安徽省2026年第3批拟入库科技型中小企业名单</li>
+</ul>
   </article>
 
   <a class="source-link" href="https://www.ahchanye.com/zc/65791.html" target="_blank" rel="noopener">
@@ -258,7 +757,7 @@ footer p { margin-bottom:8px; line-height:1.8; }
   </a>
 
   <footer>
-    <p>OPC 每日观察 · 自动生成于 2026-10-17 22:49</p>
+    <p>OPC 每日观察 · 自动生成于 2026-10-17 22:52</p>
     <p>聚焦一人公司 / 超级个体的学术研究与政策动态</p>
   </footer>
 
