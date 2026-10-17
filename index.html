@@ -2,96 +2,163 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>安徽省各地人工智能"一人公司"（OPC）扶持政策汇编 · OPC 每日观察</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
 :root {
   --bg:#0d1117; --card:#161b22; --border:#21262d;
   --text:#e6edf3; --muted:#8b949e; --accent:#f0883e; --accent2:#58a6ff;
+  --serif:"Noto Serif SC","Source Han Serif SC","思源宋体",Georgia,serif;
+  --sans:"Noto Sans SC","Source Han Sans SC","思源黑体","PingFang SC",-apple-system,sans-serif;
+  --gutter:20px;
 }
 body {
   background:var(--bg); color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;
-  line-height:1.85; padding:0 0 80px;
+  font-family:var(--sans); font-weight:300;
+  line-height:1.95; letter-spacing:.01em;
+  padding:0 0 env(safe-area-inset-bottom);
+  overflow-x:hidden;
 }
-.hero {
-  background:linear-gradient(150deg,#1a2332 0%,#0d1117 70%);
-  padding:56px 24px 40px; border-bottom:1px solid var(--border);
-}
-.wrap { max-width:720px; margin:0 auto; }
-.badge {
-  display:inline-block; font-size:12px; letter-spacing:1.5px;
-  color:var(--accent); border:1px solid rgba(240,136,62,.4);
-  padding:5px 12px; border-radius:20px; margin-bottom:22px;
-  text-transform:uppercase; font-weight:600;
-}
-h1 { font-size:31px; line-height:1.4; font-weight:700; margin-bottom:18px; letter-spacing:-.4px; }
-.meta { color:var(--muted); font-size:14px; display:flex; gap:18px; flex-wrap:wrap; }
-.meta span { display:flex; align-items:center; gap:6px; }
 
+/* ===== 页边距：手机优先，桌面收敛 ===== */
+.wrap { max-width:640px; margin:0 auto; padding:0 var(--gutter); }
+
+/* ===== Hero ===== */
+.hero {
+  background:linear-gradient(160deg,#1a2332 0%,#0d1117 75%);
+  padding:calc(52px + env(safe-area-inset-top)) var(--gutter) 40px;
+  border-bottom:1px solid var(--border);
+}
+.hero .wrap { padding:0; }
+.badge {
+  display:inline-block; font-size:11px; letter-spacing:2px;
+  color:var(--accent); border:1px solid rgba(240,136,62,.35);
+  padding:6px 14px; border-radius:20px; margin-bottom:24px;
+  font-weight:500; font-family:var(--sans);
+}
+h1 {
+  font-family:var(--serif); font-weight:600;
+  font-size:29px; line-height:1.5; letter-spacing:-.01em;
+  margin-bottom:20px;
+}
+.meta {
+  color:var(--muted); font-size:13.5px; font-weight:300;
+  display:flex; gap:16px; flex-wrap:wrap; align-items:center;
+}
+
+/* ===== 播放器：开车场景核心 ===== */
 .player {
-  background:var(--card); border:1px solid var(--border); border-radius:16px;
-  padding:24px; margin:32px 0 36px; position:relative; overflow:hidden;
+  background:linear-gradient(145deg,#1c2128,#161b22);
+  border:1px solid var(--border); border-radius:18px;
+  padding:26px 22px; margin:30px 0 34px;
+  position:relative; overflow:hidden;
+  box-shadow:0 8px 32px rgba(0,0,0,.4);
 }
 .player::before {
   content:''; position:absolute; top:0; left:0; right:0; height:2px;
   background:linear-gradient(90deg,var(--accent),var(--accent2));
 }
 .player-label {
-  font-size:12px; color:var(--muted); letter-spacing:1.2px;
-  text-transform:uppercase; margin-bottom:14px; font-weight:600;
+  font-size:11.5px; color:var(--muted); letter-spacing:1.8px;
+  margin-bottom:16px; font-weight:400;
 }
-.player audio { width:100%; outline:none; border-radius:8px; }
+.player audio {
+  width:100%; outline:none; border-radius:10px;
+  height:48px;
+}
+/* 移动端加大触控区 */
+@media(max-width:600px) {
+  .player audio { height:54px; }
+}
 .no-audio {
-  color:var(--muted); font-size:14px; padding:16px;
-  background:rgba(139,148,158,.08); border-radius:8px; text-align:center;
+  color:var(--muted); font-size:14px; padding:18px;
+  background:rgba(139,148,158,.07); border-radius:10px; text-align:center;
 }
 
+/* ===== 要点 ===== */
 .summary-box {
-  background:rgba(240,136,62,.06); border-left:3px solid var(--accent);
-  padding:20px 24px; border-radius:0 12px 12px 0; margin-bottom:40px;
+  background:rgba(240,136,62,.055); border-left:3px solid var(--accent);
+  padding:22px 24px; border-radius:0 14px 14px 0; margin-bottom:42px;
 }
 .summary-box h3 {
-  font-size:13px; color:var(--accent); letter-spacing:1.2px;
-  text-transform:uppercase; margin-bottom:12px; font-weight:600;
+  font-size:11.5px; color:var(--accent); letter-spacing:1.8px;
+  margin-bottom:14px; font-weight:500; font-family:var(--sans);
 }
-.summary-box p { font-size:15.5px; color:#c9d1d9; }
+.summary-box p {
+  font-family:var(--serif); font-weight:500;
+  font-size:16px; color:#d5dde5; line-height:1.9;
+}
 
-article { font-size:16.5px; color:#c9d1d9; }
-article p { margin-bottom:22px; text-align:justify; }
+/* ===== 正文：思源黑体 Light ===== */
+article {
+  font-family:var(--sans); font-weight:300;
+  font-size:17px; color:#c9d1d9;
+  line-height:2.0; letter-spacing:.02em;
+}
+article p { margin-bottom:26px; text-align:justify; text-justify:inter-ideograph; }
 article h2 {
-  font-size:19px; color:var(--text); font-weight:600;
-  margin:34px 0 16px; padding-left:14px;
-  border-left:3px solid var(--accent2);
+  font-family:var(--serif); font-weight:600;
+  font-size:19.5px; color:var(--text);
+  margin:42px 0 18px; padding-left:15px;
+  border-left:3px solid var(--accent2); line-height:1.6;
 }
 article p:first-of-type::first-letter {
-  font-size:46px; float:left; line-height:1; padding:4px 10px 0 0;
-  color:var(--accent); font-weight:700;
+  font-family:var(--serif); font-weight:700;
+  font-size:48px; float:left; line-height:1;
+  padding:6px 12px 0 0; color:var(--accent);
 }
 
+/* ===== 来源 ===== */
 .source-link {
   display:flex; align-items:center; justify-content:space-between;
-  background:var(--card); border:1px solid var(--border); border-radius:12px;
-  padding:20px 24px; margin:44px 0 32px; text-decoration:none;
+  background:var(--card); border:1px solid var(--border); border-radius:14px;
+  padding:22px 24px; margin:48px 0 34px; text-decoration:none;
   color:var(--text); transition:.2s;
+  min-height:64px;
 }
-.source-link:hover { border-color:var(--accent2); transform:translateY(-2px); }
-.source-link .txt { font-size:15px; }
-.source-link .txt small { display:block; color:var(--muted); font-size:12.5px; margin-top:4px; }
-.arrow { color:var(--accent2); font-size:22px; }
+.source-link:active { background:#1c2128; }
+.source-link .txt { font-size:15px; font-weight:400; }
+.source-link .txt small {
+  display:block; color:var(--muted); font-size:12px;
+  margin-top:6px; font-weight:300;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  max-width:min(72vw,480px);
+}
+.arrow { color:var(--accent2); font-size:24px; flex-shrink:0; margin-left:12px; }
 
+/* ===== 页脚 ===== */
 footer {
-  text-align:center; color:var(--muted); font-size:12.5px;
-  padding-top:36px; border-top:1px solid var(--border); margin-top:52px;
+  text-align:center; color:var(--muted); font-size:12px; font-weight:300;
+  padding:38px 0 calc(40px + env(safe-area-inset-bottom));
+  border-top:1px solid var(--border); margin-top:52px;
 }
-footer p { margin-bottom:6px; }
+footer p { margin-bottom:8px; line-height:1.8; }
 
+/* ===== 手机端适配 ===== */
 @media(max-width:600px) {
-  .hero { padding:40px 20px 32px; }
-  h1 { font-size:24px; }
-  article { font-size:16px; }
-  .player { padding:18px; }
+  :root { --gutter:22px; }
+  .hero { padding-top:calc(44px + env(safe-area-inset-top)); padding-bottom:34px; }
+  h1 { font-size:25px; line-height:1.55; }
+  article { font-size:17.5px; line-height:2.05; }
+  article p { margin-bottom:26px; }
+  article h2 { font-size:18.5px; margin:38px 0 16px; }
+  .summary-box { padding:20px 22px; margin-bottom:38px; }
+  .player { margin:26px 0 30px; padding:22px 18px; }
+}
+
+/* 大屏桌面 */
+@media(min-width:1000px) {
+  :root { --gutter:20px; }
+  .wrap { max-width:680px; }
+  h1 { font-size:34px; }
 }
 </style>
 </head>
@@ -191,7 +258,7 @@ footer p { margin-bottom:6px; }
   </a>
 
   <footer>
-    <p>OPC 每日观察 · 自动生成于 2026-10-17 22:45</p>
+    <p>OPC 每日观察 · 自动生成于 2026-10-17 22:49</p>
     <p>聚焦一人公司 / 超级个体的学术研究与政策动态</p>
   </footer>
 
