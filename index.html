@@ -92,9 +92,17 @@ h1 {
   font-size:11.5px; color:var(--accent); letter-spacing:1.8px;
   margin-bottom:14px; font-weight:500; font-family:var(--sans);
 }
-.summary-box p {
-  font-family:var(--serif); font-weight:500;
-  font-size:16px; color:#d5dde5; line-height:1.9;
+.summary-box ul { list-style:none; padding:0; margin:0; }
+.summary-box li {
+  font-family:var(--sans); font-weight:400;
+  font-size:15.5px; color:#d5dde5; line-height:1.85;
+  position:relative; padding-left:20px; margin-bottom:12px;
+}
+.summary-box li:last-child { margin-bottom:0; }
+.summary-box li::before {
+  content:''; position:absolute; left:0; top:11px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent);
 }
 
 /* ===== 正文：思源黑体 Light ===== */
@@ -239,29 +247,7 @@ footer p { margin-bottom:8px; line-height:1.8; }
     <audio controls preload='metadata' src='2026-10-17.mp3'></audio>
   </div>
 
-  <div class="summary-box"><h3>今日要点</h3><p>支持数字游民服务平台建设，基地最高30万元、撮合运营主体最高50万元
-    鼓励一人公司（OPC）创业发展，支持数字游民社区孵化OPC项目
-    对年度内成功孵化5个及以上OPC的数字游民社区，给予最高30万元奖补
-4. #### 黄山市发放全市首张工位登记 OPC 营业执照
-
-    设OPC专属窗口，推行工位注册、证照联办、“个转OPC”一站式服务
-    落地于“数字游民+OPC”创新创业行动计划框架之下
-
-### 10. 滁州市（已有政策）
-
-该市已将 OPC 纳入青年人才创业生态与园区政策体系。
-
-1. #### 滁州市全链条打造青年人才 OPC 创业优质生态
-
-    将OPC创业者纳入全市人才政策体系，支持苏滁现代产业园、南谯区出台OPC专项扶持政策
-    构建“订单+金融+AI工具+社群”赋能体系，开放百余个应用场景，揭榜挂帅优质项目最高1000万元
-    设立500万元风险补偿基金、1亿元产业赋能基金，联合金融机构推出专属信贷产品
-    发放“数据券”，企业购买词元（Token）服务最高按30%比例补贴
-    建成滁州市人工智能OPC社区等3个特色载体，累计入驻OPC企业68家
-2. #### 滁州创新打造“琅琊星辰”超级个体集聚示范区
-
-    全国首个“人工智能+一人公司”人力资源服务社区
-    500万元风险补偿基金、1亿元产业赋能基金（二期）</p></div>
+  <div class="summary-box"><h3>今日要点</h3><ul><li>已有政策（7 市）：合肥市、芜湖市、淮南市、马鞍山市、安庆市、黄山市、滁州市</li><li>载体先行（5 市）：蚌埠市、淮北市、六安市、池州市、宣城市</li><li>尚无专项政策（4 市）：铜陵市、阜阳市、宿州市、亳州市</li><li>3年内新培育科技和创新型中小企业1万家以上，专精特新“小巨人”企业突破2000家</li></ul></div>
 
   <article>
     <h1>安徽省各地人工智能"一人公司"（OPC）扶持政策汇编</h1>
@@ -757,7 +743,7 @@ footer p { margin-bottom:8px; line-height:1.8; }
   </a>
 
   <footer>
-    <p>OPC 每日观察 · 自动生成于 2026-10-17 22:52</p>
+    <p>OPC 每日观察 · 自动生成于 2026-10-17 22:57</p>
     <p>聚焦一人公司 / 超级个体的学术研究与政策动态</p>
   </footer>
 
